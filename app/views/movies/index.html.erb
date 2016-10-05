@@ -1,0 +1,21 @@
+<h1>Movies List</h1>
+
+<%= link_to 'New movie', new_movie_path %>
+<table>
+  <tr>
+    <th><em>movietitle</em></th>
+    <th>timings</th>
+	<th><em>reviews</em></th>
+	<th colspan = "200"></th>
+	</tr>
+ 
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.movietitle %></td>
+      <td><%= movie.timings %></td>
+	  <td><%= movie.reviews %></td>
+	  
+	 <td><%= link_to 'Show', movie %></td>
+    </tr>
+  <% end %>
+</table>

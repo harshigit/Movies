@@ -1,0 +1,25 @@
+<%= @movie.movietitle %>
+
+
+<%= image_tag @movie.photo.url(:medium) %>
+<p>
+  <strong>movietitle:</strong>
+  <%= @movie.movietitle %>
+</p>
+ 
+<p>
+  <strong>timings:</strong>
+  <%= @movie.timings %>
+</p>
+
+<p>
+  <strong>reviews:</strong>
+  <%= @movie.reviews %>
+</p>
+
+
+
+
+<%=  link_to 'Back', movies_path %></br>
+
+<a href="/movies/new">Add new Movies!</a>
