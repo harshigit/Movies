@@ -12,15 +12,13 @@ def index
   end
 	
   def create
-  binding.pry
-  
     @movie = Movie.new(movie_params)
  
-     if @movie.save
+      if @movie.save
         redirect_to action: "index"
-     else
+      else
 	    render action: "new" 
-	 end
+	  end
   end
   
  private
